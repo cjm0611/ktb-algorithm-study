@@ -36,9 +36,9 @@ jobs: # 워크 플로우에서 실행될 작업들
       with:
         python-version: '3.x'
 
-    - name: Install dependencies # 파이썬 프로젝트에 필요한 의존성을 설치
+    - name: Install dependencies # 파이썬 프로젝트에 필요한 의존성을 설치 (feedparser, gitpython)
       run: |
-        pip install feedparser gitpython # feedparser와 gitpython 패키지를 설치
+        pip install feedparser gitpython
 
     - name: Run script # 스크립트를 실행하는 단계
       run: python scripts/update_blog.py
